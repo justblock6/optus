@@ -7,7 +7,7 @@
         iframe.onload = function() {
             // Access the iframe's content and inject the script
             var iframeDocument = iframe.contentDocument || iframe.contentWindow.document;
-            iframeDocument.body.innerHTML += '<script>alert(document.domain);<\/script>';
+            iframeDocument.body.innerHTML += '<script>alert(document.baseURI);<\/script>';
         };
     </script>
 </body>
